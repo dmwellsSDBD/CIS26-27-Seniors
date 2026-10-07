@@ -71,6 +71,18 @@ img {
     display: block;
 }
 
+/* Shared spacing for every main section */
+main section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 /* -------------- 3. HEADER & NAVIGATION (FLEXBOX) -------------- */
 .site-header {
     position: sticky;           /* header stays at the top while scrolling */
@@ -103,4 +115,90 @@ img {
     display: flex;          /* Flexbox can center one item perfectly */
     justify-content: center;
     align-items: center;
+}
+
+.logo-name {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255,255,255, 0.12);
+}
+
+
+/* -------------- 4. About Section (GRID) -------------------*/
+.about {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* fixed photo column, flexible text column */
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-photo {
+    aspect-ratio: 1 / 1;    /* always a perferct square */
+    background-color: var(--river);
+    border-radius: 50%;
+    border: 6px solid var(--gold);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+.about-photo .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* fills the circle without stretching */
+}
+
+.about-text h1 {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);   /* grows with the screen width */
+    margin-bottom: 0.25rem;
+}
+
+.tagline {
+    color: var(--river-dark);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.about-text p {
+    max-width: 65ch;        /* Keeps lines comfortable to read */
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--river);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: var(--river-dark);
 }
