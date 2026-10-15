@@ -223,6 +223,98 @@ main h2 {
     font-weight: 600;
 }
 
+/* ----------- 6. PROJECT CARDS (GRID + FLEXBOX) ----------- */
+.projects {
+    border-top: 1px solid var(--line);
+}
+
+.section-intro {
+    color: var(--ink-soft);
+    margin-top: -0.75rem;
+    margin-bottom: 2rem;
+}
+
+/* auto-fit + minmax = responsive cards with NO media query. 
+    Each card is at least 280px wide; the browser fits as many 
+    columns as it can and shares the leftover space evenly. */
+.card-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;  /* stack banner and body vertically */
+}
+
+.card-banner {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Courier New", monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* Banner color shows the project type */
+.banner-html { background-color: var(--ink); }
+.banner-css { background-color: var(--river); }
+.banner-js { background-color: #6b4c9a; }
+.banner-py { background-color: var(--gold); }
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;       /* body fills remaining card height */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+}
+
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.tags li {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.6rem;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+}
+
+.card-link {
+    margin-top: auto;     /* pushes the link to the bottom of the card */
+    align-self: flex-start;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+}
+
+.card-link:hover {
+    color: var(--river-dark);
+    border-bottom-color: var(--river-dark);
+}
 
 /* ----------- 7. FOOTER (GRID & FLEXBOX ------------- */
 
@@ -232,7 +324,42 @@ main h2 {
     padding: 3.5rem 1.5rem 1.5rem;
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 2.5rem;
+}
 
+.footer-col h2 {
+    font-size: 1.2rem;
+    color: var(--white);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.footer-col a {
+    color: var(--line);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-col a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
 
 .footer-bottom {
     max-width: var(--max-width);
