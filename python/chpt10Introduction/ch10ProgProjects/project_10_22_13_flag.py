@@ -1,0 +1,16 @@
+# Project 10.22.13 - United States flag using * and = characters.
+# Stars in the blue field, "=" for red stripes, blank for white stripes.
+print("* * * * * * ==================")
+print(" * * * * *  ")
+print("* * * * * * ==================")
+print(" * * * * *  ")
+print("* * * * * * ==================")
+print(" * * * * *  ")
+print("* * * * * * ==================")
+print("==============================")
+print("")
+print("==============================")
+print("")
+print("==============================")
+print("")
+print("==============================")
