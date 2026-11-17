@@ -18,5 +18,6 @@ print("Lives at start:", lives)
 lives = lives + 2       # adding 2 lives to your total
 print("After a power-up:", lives)
 
-# Demo 2: Arithmatic
-
+# ------------------------------------------------------------
+# DEMO 3 - Operators and precedence (11.2)
+# ------------------------------------------------------------
