@@ -52,7 +52,49 @@ def demo4_floor_and_mod():
     print("17 // 5 =", 17 // 5)     # 3
     print("17 % 5 = ", 17 % 5)      # 2
     
-    
+    # Convert a video length in seconds to minutes and seconds
+    videoSeconds = 754
+    minutes = videoSeconds // 60
+    seconds = videoSeconds % 60
+    print("Video length:", minutes, "min", seconds, "sec")  # 12 min 34 sec
 
+    # Digit Tricks
+    n = 2027
+    print("Last digit:", n % 10) # 6
+    print("Without last digit:", n // 10)  #202
+    print("Even? remainder is:", n % 2)  # 0
 
 demo4_floor_and_mod()
+
+# DEMO 5 - Built-in functions, the math module, roundoff (11.2)
+print("\n\nDEMO 5 - Built-in functions, the math module, roundoff (11.2)")
+
+def demo5_functions():
+    from math import sqrt, pi
+
+    # Built-in functions: no import need
+    print("abs(-42) =", abs(-42))    # 42
+    print("round(3.14159) =", round(3.14159))    #  3
+    print("round(3.14159, 3) =", round(3.14159, 3))  #  3.142
+    print("max(52, 64, 37, 89, 34) =", max(52, 64, 37, 89, 34))  # 89
+    print("min(52, 64, 37, 89, 34) =", min(52, 64, 37, 89, 34))  #34
+
+    # math module functions: must be imported
+    a = 3 
+    b = 4
+    hypotenuse = sqrt(a ** 2 + b ** 2)
+    print("Hypotenuse:", hypotenuse)       # 5.0
+
+    print("\n\nFind the area of a circle:")
+    radius = 2.5
+    area = pi * radius ** 2
+    print("Circle area:", round(area, 2))  
+
+    print("\n\n Roundoff error: binary can't store 4.35 exactly") 
+    price = 4.35
+    quantity = 100
+    total = price * quantity
+    print("Total:", total)
+    print("Rounded:", round(total, 2))
+
+demo5_functions()
